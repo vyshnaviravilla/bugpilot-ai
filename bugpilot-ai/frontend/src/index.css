@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { color-scheme: dark; }
+  body { @apply bg-ink-950 text-slate-200 font-sans antialiased; }
+  :focus-visible { @apply outline-none ring-2 ring-sky-400/70 ring-offset-2 ring-offset-ink-950; }
+  ::selection { background: rgba(52, 211, 153, 0.3); }
+}
+
+@layer components {
+  .card { @apply rounded-2xl border border-white/[0.07] bg-ink-800/60; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-medium transition-colors duration-150 disabled:cursor-not-allowed disabled:opacity-60; }
+  .btn-ghost { @apply btn border border-white/10 text-slate-300 hover:bg-white/5 hover:text-white; }
+  .input { @apply w-full rounded-xl border border-white/10 bg-ink-900 px-3.5 py-2.5 text-sm text-slate-100 placeholder:text-slate-500 transition-colors focus:border-sky-400/60 focus:outline-none focus:ring-2 focus:ring-sky-400/20; }
+  .chip { @apply inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-xs font-medium; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

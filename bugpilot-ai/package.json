@@ -1,0 +1,12 @@
+{
+  "name": "bugpilot-ai",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "BugPilot AI - AI-powered QA and developer collaboration platform",
+  "scripts": {
+    "start": "node start.mjs",
+    "dev": "node start.mjs"
+  },
+  "engines": { "node": ">=18" }
+}
